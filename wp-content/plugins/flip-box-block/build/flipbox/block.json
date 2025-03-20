@@ -1,0 +1,55 @@
+{
+  "apiVersion": 3,
+  "name": "flipbox-block/flipbox",
+  "title": "Flip Box",
+  "category": "design",
+  "textdomain": "flip-box-block",
+  "description": "Flip Box is a block that allows you to freely place blocks back and forth.",
+  "attributes": {
+    "editFlipbox": {
+      "type": "string",
+      "default": "front"
+    },
+    "flipboxHeight": {
+      "type": "string",
+      "default": "500px"
+    }
+  },
+  "supports": {
+    "html": false,
+    "reusable": false,
+    "className": true
+  },
+  "example": {
+    "attributes": {
+      "flipboxHeight": "200px"
+    },
+    "innerBlocks": [
+      {
+        "name": "flipbox-block/flipbox-front",
+        "innerBlocks": [
+          {
+            "name": "core/image",
+            "attributes": {
+              "url": "https://ps.w.org/flip-box-block/assets/banner-772x250.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "name": "flipbox-block/flipbox-back",
+        "innerBlocks": [
+          {
+            "name": "core/image",
+            "attributes": {
+              "url": "https://ps.w.org/flip-box-block/assets/banner-772x250.jpg"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}
